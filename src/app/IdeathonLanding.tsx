@@ -88,7 +88,7 @@ const IdeathonLanding = () => {
 
                     <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-12">
                         <button className="group bg-gradient-to-r from-yellow-400 to-yellow-500 text-black px-8 py-4 rounded-full font-bold text-lg hover:from-yellow-300 hover:to-yellow-400 transition-all duration-300 flex items-center space-x-2 shadow-2xl hover:shadow-yellow-400/25">
-                            <span> <a href="https://unstop.com/o/gZSGPaM?lb=3YyEv8pp" target="_blank" rel="noopener noreferrer"> Register on Unstop </a> </span>
+                            <span> <a href="https://unstop.com/m/opportunity/1530195/step3" target="_blank" rel="noopener noreferrer"> Register on Unstop </a> </span>
                             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                         </button>
                         <div className="text-gray-400 text-lg">
@@ -193,7 +193,7 @@ const IdeathonLanding = () => {
                     <div className="max-w-4xl mx-auto">
                         <div className="space-y-8">
                             {[
-                                { date: "30 July 2025", event: "Registration Opens", desc: "Sign up begins on Unstop platform", icon: Users },
+                                { date: "2 August 2025", event: "Registration Opens", desc: "Sign up begins on Unstop platform", icon: Users },
                                 { date: "15 August 2025", event: "Registration Closes", desc: "Last day to register for the competition", icon: Users },
                                 { date: "08 - 22 August 2025", event: "PPT Submission Window", desc: "Submit your startup presentation", icon: Lightbulb },
                                 { date: "23 & 24 August 2025", event: "Online Team Shortlisting", desc: "Google Meet evaluation rounds", icon: Target },
@@ -322,7 +322,7 @@ const IdeathonLanding = () => {
                     <p className="text-xl text-gray-300 mb-12 leading-relaxed">
                         Join hundreds of innovators in the ultimate startup challenge. Your idea could be the next big breakthrough.
                     </p>
-                    <a href="https://unstop.com/o/gZSGPaM?lb=3YyEv8pp" target="_blank" rel="noopener noreferrer">
+                    <a href="https://unstop.com/m/opportunity/1530195/step3" target="_blank" rel="noopener noreferrer">
                         <button className="group bg-gradient-to-r from-yellow-400 to-yellow-500 text-black px-12 py-6 rounded-full font-bold text-xl hover:from-yellow-300 hover:to-yellow-400 transition-all duration-300 shadow-2xl hover:shadow-yellow-400/50 flex items-center space-x-3 mx-auto">
                             <span>  Register Now on Unstop </span>
                             <ArrowRight className="w-6 h-6 group-hover:translate-x-2 transition-transform" />
