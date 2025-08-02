@@ -25,11 +25,8 @@ const IdeathonLanding = () => {
             {/* Header */}
             <nav className="fixed top-0 w-full bg-black/20 backdrop-blur-md z-50 border-b border-yellow-400/20">
                 <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-                    <div className="flex items-center space-x-3">
-                        <div className="w-10 h-10 bg-yellow-400 rounded-lg flex items-center justify-center">
-                            <Lightbulb className="w-6 h-6 text-black" />
-                        </div>
-                        <span className="text-2xl font-bold">IDEATHON</span>
+                    <div>
+                        <img src="/ideathon-logoo.png" alt="IDEATHON Logo" className="w-auto h-12" />
                     </div>
                     <div className="hidden md:flex space-x-8">
                         <a href="#about" className="hover:text-yellow-400 transition-colors">About</a>
@@ -41,7 +38,7 @@ const IdeathonLanding = () => {
             </nav>
 
             {/* Hero Section */}
-            <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+            <section className="pt-4 relative min-h-screen flex items-center justify-center overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-br from-yellow-400/5 via-transparent to-yellow-400/5"></div>
 
                 <AnimatedBackground />
@@ -73,7 +70,8 @@ const IdeathonLanding = () => {
                         <span className="text-yellow-400 font-semibold">National Level Competition</span>
                     </div>
 
-                    <h1 className="text-6xl md:text-8xl font-black mb-6 leading-tight">
+                    <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-black mb-6 leading-tight">
+
                         <span className="bg-gradient-to-r from-white via-yellow-400 to-white bg-clip-text text-transparent">
                             IDEATHON
                         </span>
@@ -353,7 +351,7 @@ const IdeathonLanding = () => {
 
             <footer className="py-12 border-t border-gray-800">
                 <div className="max-w-7xl mx-auto px-6">
-                    <div className="grid md:grid-cols-3 gap-8 mb-8 text-center md:text-left">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8 text-center md:text-left">
 
                         <div>
                             <h4 className="text-xl font-bold mb-2 text-yellow-400">Contact Details</h4>
