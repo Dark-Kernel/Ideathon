@@ -1,7 +1,7 @@
 "use client";
 import React, { useState, useEffect } from 'react';
 import AnimatedBackground from './components/AnimatedBackground';
-import { ChevronDown, Calendar, Users, Trophy, ArrowRight, Code, Lightbulb, Target, Award } from 'lucide-react';
+import { ChevronDown, Calendar, Users, Trophy, ArrowRight, Code, Lightbulb, Target, Award, Mail, Phone, MessageSquare, Contact } from 'lucide-react';
 
 const IdeathonLanding = () => {
 
@@ -46,6 +46,28 @@ const IdeathonLanding = () => {
 
                 <AnimatedBackground />
 
+                <style jsx>{`
+                    @keyframes floatStar {
+                        0% {
+                            transform: translateY(100vh) translateX(-50px) scale(0);
+                            opacity: 0;
+                        }
+                        10% {
+                            opacity: 0.6;
+                            transform: translateY(90vh) translateX(-40px) scale(1);
+                        }
+                        90% {
+                            opacity: 0.6;
+                            transform: translateY(10vh) translateX(40px) scale(1);
+                        }
+                        100% {
+                            transform: translateY(-100px) translateX(50px) scale(0);
+                            opacity: 0;
+                        }
+                    }
+                    `}</style>
+
+
                 <div className="relative z-10 text-center max-w-6xl mx-auto px-6">
                     <div className="mb-8 inline-flex items-center bg-yellow-400/10 border border-yellow-400/30 rounded-full px-6 py-2">
                         <span className="text-yellow-400 font-semibold">National Level Competition</span>
@@ -68,12 +90,12 @@ const IdeathonLanding = () => {
 
                     <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-12">
                         <button className="group bg-gradient-to-r from-yellow-400 to-yellow-500 text-black px-8 py-4 rounded-full font-bold text-lg hover:from-yellow-300 hover:to-yellow-400 transition-all duration-300 flex items-center space-x-2 shadow-2xl hover:shadow-yellow-400/25">
-                            <span>Register on Unstop</span>
+                            <span> <a href="https://unstop.com/o/gZSGPaM?lb=3YyEv8pp" target="_blank" rel="noopener noreferrer"> Register on Unstop </a> </span>
                             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                         </button>
                         <div className="text-gray-400 text-lg">
                             <Calendar className="w-5 h-5 inline mr-2" />
-                            Registration Deadline: TBD
+                            Registration Deadline: 15 August 2025
                         </div>
                     </div>
 
@@ -139,7 +161,7 @@ const IdeathonLanding = () => {
                 </div>
             </section>
 
-            {/* Timeline Section */}
+            {/* Timeline Section 
             <section id="timeline" className="py-20 bg-gradient-to-r from-gray-900/50 to-black/50">
                 <div className="max-w-7xl mx-auto px-6">
                     <h3 className="text-5xl font-bold text-center mb-16 bg-gradient-to-r from-yellow-400 to-white bg-clip-text text-transparent">
@@ -163,8 +185,69 @@ const IdeathonLanding = () => {
                     </div>
                 </div>
             </section>
+            */}
 
-            {/* Prizes Section */}
+            <section id="timeline" className="py-20 bg-gradient-to-r from-gray-900/50 to-black/50">
+                <div className="max-w-7xl mx-auto px-6">
+                    <h3 className="text-5xl font-bold text-center mb-16 bg-gradient-to-r from-yellow-400 to-white bg-clip-text text-transparent">
+                        Event Timeline
+                    </h3>
+                    <div className="max-w-4xl mx-auto">
+                        <div className="space-y-8">
+                            {[
+                                { date: "30 July 2025", event: "Registration Opens", desc: "Sign up begins on Unstop platform", icon: Users },
+                                { date: "15 August 2025", event: "Registration Closes", desc: "Last day to register for the competition", icon: Users },
+                                { date: "08 - 22 August 2025", event: "PPT Submission Window", desc: "Submit your startup presentation", icon: Lightbulb },
+                                { date: "23 & 24 August 2025", event: "Online Team Shortlisting", desc: "Google Meet evaluation rounds", icon: Target },
+                                { date: "26 & 27 August 2025", event: "Shortlisted Teams Announcement", desc: "Results of online evaluation", icon: Trophy },
+                                { date: "02 & 03 September 2025", event: "Invitations Sent", desc: "Selected teams receive event invitations", icon: Award },
+                                { date: "13 September 2025", event: "Final Offline Ideathon", desc: "Grand finale at our campus", icon: Trophy }
+                            ].map((item, idx) => (
+                                <div key={idx} className="flex flex-col md:flex-row items-start md:items-center gap-6 p-6 bg-gradient-to-r from-yellow-400/5 to-transparent rounded-xl border border-yellow-400/20 hover:border-yellow-400/40 transition-all duration-300">
+                                    <div className="w-20 h-20 bg-gradient-to-br from-yellow-400 to-yellow-500 rounded-full flex items-center justify-center mb-6 mx-auto shadow-2xl group-hover:shadow-yellow-400/50">
+                                        <item.icon className="w-10 h-10 text-black" />
+                                    </div>
+                                    <div className="md:w-48 flex-shrink-0">
+                                        <div className="text-yellow-400 font-bold text-lg">{item.date}</div>
+                                    </div>
+                                    <div className="flex-grow">
+                                        <h4 className="text-xl font-bold mb-2">{item.event}</h4>
+                                        <p className="text-gray-400">{item.desc}</p>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Who Will Be There Section */}
+            <section className="py-20">
+                <div className="max-w-7xl mx-auto px-6">
+                    <h3 className="text-5xl font-bold text-center mb-16 bg-gradient-to-r from-yellow-400 to-white bg-clip-text text-transparent">
+                        Who Will Be There?
+                    </h3>
+                    <div className="grid md:grid-cols-3 lg:grid-cols-5 gap-8">
+                        {[
+                            { count: "300+", label: "Tech Participants" },
+                            { count: "100+", label: "Shortlisted Teams" },
+                            { count: "1000+", label: "College Audience" },
+                            { count: "50+", label: "Tech Experts & Mentors" },
+                            { count: "200+", label: "Startup Enthusiasts" }
+                        ].map((item, idx) => (
+                            <div key={idx} className="text-center group hover:scale-105 transition-transform duration-300">
+                                <div className="w-24 h-24 bg-gradient-to-br from-yellow-400/20 to-yellow-500/10 rounded-full flex items-center justify-center mb-4 mx-auto border border-yellow-400/30 group-hover:border-yellow-400/60">
+                                    <span className="text-2xl font-bold text-yellow-400">{item.count}</span>
+                                </div>
+                                <p className="text-gray-300 font-medium">{item.label}</p>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
+
+            {/* Prizes Section 
             <section id="prizes" className="py-20">
                 <div className="max-w-7xl mx-auto px-6">
                     <h3 className="text-5xl font-bold text-center mb-16 bg-gradient-to-r from-yellow-400 to-white bg-clip-text text-transparent">
@@ -191,6 +274,46 @@ const IdeathonLanding = () => {
                     </div>
                 </div>
             </section>
+            */}
+
+            <section id="prizes" className="py-20 bg-gradient-to-r from-gray-900/50 to-black/50">
+                <div className="max-w-7xl mx-auto px-6">
+                    <h3 className="text-5xl font-bold text-center mb-8 bg-gradient-to-r from-yellow-400 to-white bg-clip-text text-transparent">
+                        Prizes & Recognition
+                    </h3>
+                    <div className="text-center mb-12">
+                        <div className="inline-flex items-center bg-yellow-400/10 border border-yellow-400/30 rounded-full px-6 py-3">
+                            <Trophy className="w-6 h-6 text-yellow-400 mr-3" />
+                            <span className="text-yellow-400 font-bold text-xl">Prize Pool: ₹30,000+</span>
+                        </div>
+                    </div>
+                    <div className="grid md:grid-cols-3 gap-8 mb-12">
+                        {[
+                            { position: "Winner", prize: "Cash Prize + Quasar Entry", extra: "Mentorship Program" },
+                            { position: "Runner Up", prize: "Cash Prize + Quasar Entry", extra: "Industry Connect" },
+                            { position: "3rd Place", prize: "Cash Prize + Recognition", extra: "Certificate of Excellence" }
+                        ].map((item, idx) => (
+                            <div key={idx} className={`relative p-8 rounded-2xl border-2 hover:scale-105 transition-all duration-300 ${idx === 0 ? 'border-yellow-400 bg-gradient-to-br from-yellow-400/10 to-transparent' : 'border-gray-600 bg-gradient-to-br from-gray-800/50 to-transparent'
+                                }`}>
+                                <div className="text-center">
+                                    <Award className={`w-16 h-16 mx-auto mb-4 ${idx === 0 ? 'text-yellow-400' : 'text-gray-400'}`} />
+                                    <h4 className="text-2xl font-bold mb-2">{item.position}</h4>
+                                    <div className={`text-lg font-bold mb-4 ${idx === 0 ? 'text-yellow-400' : 'text-white'}`}>
+                                        {item.prize}
+                                    </div>
+                                    <p className="text-gray-400">{item.extra}</p>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                    <div className="text-center">
+                        <div className="inline-flex items-center bg-gradient-to-r from-gray-800 to-gray-700 rounded-full px-8 py-4 border border-gray-600">
+                            <Award className="w-6 h-6 text-yellow-400 mr-3" />
+                            <span className="text-white font-bold">Certificates for All Participants</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
             {/* CTA Section */}
             <section id="register" className="py-20 bg-gradient-to-r from-yellow-400/10 via-transparent to-yellow-400/10">
@@ -201,14 +324,16 @@ const IdeathonLanding = () => {
                     <p className="text-xl text-gray-300 mb-12 leading-relaxed">
                         Join hundreds of innovators in the ultimate startup challenge. Your idea could be the next big breakthrough.
                     </p>
-                    <button className="group bg-gradient-to-r from-yellow-400 to-yellow-500 text-black px-12 py-6 rounded-full font-bold text-xl hover:from-yellow-300 hover:to-yellow-400 transition-all duration-300 shadow-2xl hover:shadow-yellow-400/50 flex items-center space-x-3 mx-auto">
-                        <span>Register Now on Unstop</span>
-                        <ArrowRight className="w-6 h-6 group-hover:translate-x-2 transition-transform" />
-                    </button>
+                    <a href="https://unstop.com/o/gZSGPaM?lb=3YyEv8pp" target="_blank" rel="noopener noreferrer">
+                        <button className="group bg-gradient-to-r from-yellow-400 to-yellow-500 text-black px-12 py-6 rounded-full font-bold text-xl hover:from-yellow-300 hover:to-yellow-400 transition-all duration-300 shadow-2xl hover:shadow-yellow-400/50 flex items-center space-x-3 mx-auto">
+                            <span>  Register Now on Unstop </span>
+                            <ArrowRight className="w-6 h-6 group-hover:translate-x-2 transition-transform" />
+                        </button>
+                    </a>
                 </div>
             </section>
 
-            {/* Footer */}
+            {/* Footer 
             <footer className="py-12 border-t border-gray-800">
                 <div className="max-w-7xl mx-auto px-6 text-center">
                     <div className="flex items-center justify-center space-x-3 mb-6">
@@ -224,6 +349,76 @@ const IdeathonLanding = () => {
                     <p className="text-gray-500 text-sm">© 2025 IDEATHON. All rights reserved.</p>
                 </div>
             </footer>
+            */}
+
+            <footer className="py-12 border-t border-gray-800">
+                <div className="max-w-7xl mx-auto px-6">
+                    <div className="grid md:grid-cols-3 gap-8 mb-8 text-center md:text-left">
+
+                        <div>
+                            <h4 className="text-xl font-bold mb-2 text-yellow-400">Contact Details</h4>
+                            <div className="space-y-2 text-gray-400">
+                                <p>
+                                    <Mail className="w-5 h-5 inline-block mr-2 text-yellow-400" />
+                                    <a href="mailto:ideathon.itsa@pvppcoe.ac.in" className="hover:underline">
+                                        ideathon.itsa@pvppcoe.ac.in
+                                    </a>
+                                </p>
+                                <p>
+                                    <Phone className="w-5 h-5 inline-block mr-2 text-yellow-400" />
+                                    <span className="hover:underline">+91 9049594831</span>
+                                </p>
+                                <p>
+                                    <MessageSquare className="w-5 h-5 inline-block mr-2 text-yellow-400" />
+                                    <span className="hover:underline">+91 8928871969</span>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div className="flex flex-col items-center md:items-center">
+                            <div className="flex items-center justify-center space-x-3 mb-4">
+                                <div className="w-12 h-12 bg-yellow-400 rounded-lg flex items-center justify-center">
+                                    <Lightbulb className="w-8 h-8 text-black" />
+                                </div>
+                                <span className="text-3xl font-bold">IDEATHON</span>
+                            </div>
+
+                            <p className="text-gray-400 mb-2">
+                                Powered by{" "}
+                                <a
+                                    href="https://itsa-pvppcoe.vercel.app"
+                                    className="text-yellow-400 hover:underline"
+                                >
+                                    ITSA
+                                </a>
+                            </p>
+                            <p className="text-gray-400 mb-2">
+                                Developed by{" "}
+                                <a
+                                    href="https://github.com/Dark-Kernel"
+                                    className="text-yellow-400 hover:underline"
+                                >
+                                    Dark-Kernel
+                                </a>
+                            </p>
+                            <p className="text-gray-500 text-sm">© 2025 IDEATHON. All rights reserved.</p>
+                        </div>
+
+                        <div className="text-center md:text-right">
+                            <h4 className="text-xl font-bold mb-4 text-yellow-400">Venue Address</h4>
+                            <div className="text-gray-400 leading-relaxed">
+                                <p>Vasantdada Patil Educational Complex</p>
+                                <p>Eastern Express Highway, Chunabhatti</p>
+                                <p>Sion East, Mumbai, Maharashtra</p>
+                                <p>MH 400022, India</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </footer>
+
+
         </div>
     );
 };
