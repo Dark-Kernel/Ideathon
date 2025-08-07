@@ -79,7 +79,7 @@ const IdeathonLanding = () => {
 
                     <div className="mb-8">
                         <h2 className="text-3xl md:text-4xl font-bold mb-4 text-yellow-400">
-                            DECODED: THE STARTUP EQUATION
+                                Spark Before the Code
                         </h2>
                         <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
                             Unleash your entrepreneurial vision. Solve real-world problems. Build the future.
@@ -88,7 +88,7 @@ const IdeathonLanding = () => {
 
                     <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-12">
                         <button className="group bg-gradient-to-r from-yellow-400 to-yellow-500 text-black px-8 py-4 rounded-full font-bold text-lg hover:from-yellow-300 hover:to-yellow-400 transition-all duration-300 flex items-center space-x-2 shadow-2xl hover:shadow-yellow-400/25">
-                            <span> <a href="https://unstop.com/m/opportunity/1530195/step3" target="_blank" rel="noopener noreferrer"> Register on Unstop </a> </span>
+                            <span> <a href="https://unstop.com/hackathons/ideathon-decoded-the-start-up-equation-padmabhushan-vasantdada-patil-pratishthans-college-of-engineering-pvpp-1530195" target="_blank" rel="noopener noreferrer"> Register on Unstop </a> </span>
                             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                         </button>
                         <div className="text-gray-400 text-lg">
@@ -322,7 +322,7 @@ const IdeathonLanding = () => {
                     <p className="text-xl text-gray-300 mb-12 leading-relaxed">
                         Join hundreds of innovators in the ultimate startup challenge. Your idea could be the next big breakthrough.
                     </p>
-                    <a href="https://unstop.com/m/opportunity/1530195/step3" target="_blank" rel="noopener noreferrer">
+                    <a href="https://unstop.com/hackathons/ideathon-decoded-the-start-up-equation-padmabhushan-vasantdada-patil-pratishthans-college-of-engineering-pvpp-1530195" target="_blank" rel="noopener noreferrer">
                         <button className="group bg-gradient-to-r from-yellow-400 to-yellow-500 text-black px-12 py-6 rounded-full font-bold text-xl hover:from-yellow-300 hover:to-yellow-400 transition-all duration-300 shadow-2xl hover:shadow-yellow-400/50 flex items-center space-x-3 mx-auto">
                             <span>  Register Now on Unstop </span>
                             <ArrowRight className="w-6 h-6 group-hover:translate-x-2 transition-transform" />

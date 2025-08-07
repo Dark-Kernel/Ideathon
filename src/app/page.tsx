@@ -2,7 +2,7 @@ import IdeathonLanding from './IdeathonLanding';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'IDEATHON - Decoded: The Startup Equation',
+  title: 'IDEATHON: Spark Before the Code ',
   description: 'Unleash your entrepreneurial vision. Solve real-world problems. Build the future.',
   icons: {
     icon: '/favicon.svg',
