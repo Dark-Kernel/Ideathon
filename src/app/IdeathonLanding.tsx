@@ -1,7 +1,7 @@
 "use client";
 import React, { useState, useEffect } from 'react';
 import AnimatedBackground from './components/AnimatedBackground';
-import { ChevronDown, Calendar, Users, Trophy, ArrowRight, Code, Lightbulb, Target, Award, Mail, Phone, MessageSquare, Contact } from 'lucide-react';
+import { ChevronDown, Calendar, Users, Trophy, ArrowRight, Code, Lightbulb, Target, Award, Mail, Phone, MessageSquare, Contact, Download } from 'lucide-react';
 
 const IdeathonLanding = () => {
 
@@ -31,6 +31,7 @@ const IdeathonLanding = () => {
                     <div className="hidden md:flex space-x-8">
                         <a href="#about" className="hover:text-yellow-400 transition-colors">About</a>
                         <a href="#timeline" className="hover:text-yellow-400 transition-colors">Timeline</a>
+                        <a href="#problems" className="hover:text-yellow-400 transition-colors">Problems</a>
                         <a href="#prizes" className="hover:text-yellow-400 transition-colors">Prizes</a>
                         <a href="#register" className="hover:text-yellow-400 transition-colors">Register</a>
                     </div>
@@ -79,7 +80,7 @@ const IdeathonLanding = () => {
 
                     <div className="mb-8">
                         <h2 className="text-3xl md:text-4xl font-bold mb-4 text-yellow-400">
-                                Spark Before the Code
+                            Spark Before the Code
                         </h2>
                         <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
                             Unleash your entrepreneurial vision. Solve real-world problems. Build the future.
@@ -214,6 +215,131 @@ const IdeathonLanding = () => {
                                     </div>
                                 </div>
                             ))}
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Problem Statements Section */}
+            <section id="problems" className="py-20">
+                <div className="max-w-7xl mx-auto px-6">
+                    <h3 className="text-5xl font-bold text-center mb-8 bg-gradient-to-r from-yellow-400 to-white bg-clip-text text-transparent">
+                        Problem Statements
+                    </h3>
+                    <p className="text-center text-gray-400 mb-10 max-w-3xl mx-auto text-lg">
+                        Choose from 10 healthcare innovation challenges designed to solve real-world problems and create meaningful impact.
+                    </p>
+                    <div className="text-center mt-2">
+                        <div className="inline-flex items-center bg-yellow-400/10 border border-yellow-400/30 rounded-full px-6 py-3 mb-6">
+                            <Lightbulb className="w-5 h-5 text-yellow-400 mr-2" />
+                            <span className="text-yellow-400 font-semibold">All problem statements focus on Healthcare Innovation</span>
+                        </div>
+                    </div>
+
+                    <div className="grid md:grid-cols-2 gap-8">
+                        {[
+                            {
+                                id: "PS1",
+                                title: "Smart Queuing & Bed Availability Management",
+                                problem: "Long patient wait times and delayed admissions due to inefficient queuing systems and lack of real-time bed availability data.",
+                                solution: "Develop an intelligent queuing system that manages patient flow, displays real-time bed availability, and streamlines admissions across hospitals."
+                            },
+                            {
+                                id: "PS2",
+                                title: "Real-Time Medicine & Consumable Quality Monitoring",
+                                problem: "Expired, counterfeit, or substandard medicines compromise patient safety with no reliable real-time monitoring system.",
+                                solution: "Create an AI-powered system using barcode/RFID scanning to detect and flag unsafe medicines before reaching patients."
+                            },
+                            {
+                                id: "PS3",
+                                title: "Health Data Information & Management System (HDIMS)",
+                                problem: "Patient health data is fragmented across multiple providers, making complete medical histories inaccessible to doctors.",
+                                solution: "Build a secure mobile app that consolidates patient records, histories, and test results with controlled access for healthcare providers."
+                            },
+                            {
+                                id: "PS4",
+                                title: "Rural Health Follow-Up & AI Symptom Guidance Platform",
+                                problem: "Rural patients fail to complete treatments due to poor follow-up, lack of reminders, and limited access to qualified doctors.",
+                                solution: "Develop a lightweight, multilingual platform via web/SMS/WhatsApp with medication reminders and AI-powered symptom checking."
+                            },
+                            {
+                                id: "PS5",
+                                title: "Diagnostics & Imaging AI (Offline/Low-Data)",
+                                problem: "Lack of radiologists and pathologists causes delays in interpreting medical scans and test reports in many regions.",
+                                solution: "Develop AI-assisted image analysis tools for X-rays, CT scans, and blood reports that operate offline on local devices."
+                            },
+                            {
+                                id: "PS6",
+                                title: "Portable Digital Blood Bank & Donor Locator",
+                                problem: "Families struggle to find matching blood donors during emergencies, leading to critical delays and adverse outcomes.",
+                                solution: "Create a mobile app connecting verified donors and blood banks using GPS and push notifications for emergency response."
+                            },
+                            {
+                                id: "PS7",
+                                title: "AI-Powered Smart Pill & Recovery Tracking Assistant",
+                                problem: "Patients miss medication doses or recovery tasks, increasing risk of complications and hospital readmissions.",
+                                solution: "Build an AI-driven recovery assistant with personalized reminders, vital sign logging, and automated symptom triage."
+                            },
+                            {
+                                id: "PS8",
+                                title: "Public Health Outbreak & Crisis Response Network",
+                                problem: "Delays in outbreak detection and fragmented coordination lead to preventable deaths and inefficient resource use.",
+                                solution: "Develop a community-driven platform for case reporting, outbreak mapping, AI trend detection, and emergency coordination."
+                            },
+                            {
+                                id: "PS9",
+                                title: "Assistive Technology for Elderly and Differently-Abled",
+                                problem: "Standard health apps don't accommodate needs of elderly and disabled users with vision, motor, or hearing impairments.",
+                                solution: "Develop a voice-first platform with accessibility features like high-contrast text, large buttons, and emergency alerts."
+                            },
+                            {
+                                id: "PS10",
+                                title: "AI-Powered Remote Poly-Diagnostic Station",
+                                problem: "Lack of specialist diagnostics in rural/remote areas causes dangerous treatment delays and unnecessary referrals.",
+                                solution: "Design portable, AI-assisted diagnostic station for multiple on-site tests with instant AI-assisted pre-analysis."
+                            }
+                        ].map((ps, idx) => (
+                            <div key={idx} className="group bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-2xl p-8 border border-gray-700 hover:border-yellow-400/50 transition-all duration-300 hover:scale-[1.02]">
+                                <div className="flex items-start justify-between mb-4">
+                                    <div className="bg-yellow-400 text-black font-bold px-4 py-2 rounded-full text-sm">
+                                        {ps.id}
+                                    </div>
+                                    <div className="w-8 h-8 bg-yellow-400/10 rounded-lg flex items-center justify-center">
+                                        <Target className="w-5 h-5 text-yellow-400" />
+                                    </div>
+                                </div>
+
+                                <h4 className="text-xl font-bold mb-4 text-white group-hover:text-yellow-400 transition-colors">
+                                    {ps.title}
+                                </h4>
+
+                                <div className="space-y-4">
+                                    <div>
+                                        <h5 className="text-red-400 font-semibold mb-2">Problem:</h5>
+                                        <p className="text-gray-400 text-sm leading-relaxed">{ps.problem}</p>
+                                    </div>
+
+                                    <div>
+                                        <h5 className="text-green-400 font-semibold mb-2">Solution Approach:</h5>
+                                        <p className="text-gray-400 text-sm leading-relaxed">{ps.solution}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+
+                    <div className="text-center mt-12">
+                        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
+                            <button className="group bg-gradient-to-r from-blue-600 to-blue-700 text-white px-6 py-3 rounded-full font-semibold hover:from-blue-500 hover:to-blue-600 transition-all duration-300 flex items-center space-x-2 shadow-lg" 
+                                onClick={() => window.open("https://drive.google.com/file/d/1Z9xBvEn0gKrKxy-Z0Q8Jf15jEGNbUg7T/view", "_blank")}>
+                                <Download className="w-5 h-5" />
+                                <span> Problem Statements PDF </span>
+                            </button>
+                            <button className="group bg-gradient-to-r from-green-600 to-green-700 text-white px-6 py-3 rounded-full font-semibold hover:from-green-500 hover:to-green-600 transition-all duration-300 flex items-center space-x-2 shadow-lg"
+                                onClick={() => window.open("https://docs.google.com/presentation/d/1c6-6-BzLD7SggjC_1X9UTOTeNbZe5Mcz/edit", "_blank")}>
+                                <Download className="w-5 h-5" />
+                                <span>PPT Submission Template</span>
+                            </button>
                         </div>
                     </div>
                 </div>
