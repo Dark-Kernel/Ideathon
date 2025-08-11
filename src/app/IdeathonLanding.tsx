@@ -196,7 +196,7 @@ const IdeathonLanding = () => {
                             {[
                                 { date: "2 August 2025", event: "Registration Opens", desc: "Sign up begins on Unstop platform", icon: Users },
                                 { date: "15 August 2025", event: "Registration Closes", desc: "Last day to register for the competition", icon: Users },
-                                { date: "08 - 22 August 2025", event: "PPT Submission Window", desc: "Submit your startup presentation", icon: Lightbulb },
+                                { date: "11 - 22 August 2025", event: "PPT Submission Window", desc: "Submit your startup presentation", icon: Lightbulb },
                                 { date: "23 & 24 August 2025", event: "Online Team Shortlisting", desc: "Google Meet evaluation rounds", icon: Target },
                                 { date: "26 & 27 August 2025", event: "Shortlisted Teams Announcement", desc: "Results of online evaluation", icon: Trophy },
                                 { date: "02 & 03 September 2025", event: "Invitations Sent", desc: "Selected teams receive event invitations", icon: Award },
